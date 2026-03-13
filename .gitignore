@@ -1,0 +1,15 @@
+# Datos crudos (pueden ser pesados)
+data/raw/
+
+# Python
+__pycache__/
+*.pyc
+.env
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Sistema
+.DS_Store
+Thumbs.db
