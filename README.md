@@ -32,6 +32,7 @@ Identification of significantly regulated genes
 
 Volcano plot
 Heatmap of top genes
+
 4. Biological Insight
 
 An additional analysis explored the effect of oxidative stress within each cell type.
@@ -44,28 +45,38 @@ A classification model was built to predict cell type (normal vs tumor) from gen
 
 Steps:
 
-Feature selection using top differentially expressed genes
-Data scaling
-Model training using Logistic Regression
+-Feature selection using top differentially expressed genes
+
+-Data scaling
+
+-Model training using Logistic Regression
 
 ⚠️ Note:
 Due to the extremely small dataset (4 samples), the model is evaluated on the training data and shows overfitting. This implementation is intended for demonstration purposes only.
 
 🧠 Key Learnings
 
-High-dimensional biological data requires careful feature selection
-Small datasets can lead to overfitting in machine learning models
-Combining biological knowledge with data science improves interpretation of results
-End-to-end workflows require both analysis and structured pipelines
+-High-dimensional biological data requires careful feature selection
+
+-Small datasets can lead to overfitting in machine learning models
+
+-Combining biological knowledge with data science improves interpretation of results
+
+-End-to-end workflows require both analysis and structured pipelines
 
 🛠️ Tech Stack
 
-Python
-Pandas, NumPy
-Seaborn, Matplotlib
-Scikit-learn
-Jupyter Notebooks
-Git & GitHub
+-Python
+
+-Pandas, NumPy
+
+-Seaborn, Matplotlib
+
+-Scikit-learn
+
+-Jupyter Notebooks
+
+-Git & GitHub
 
 🚀 Future Work
 
