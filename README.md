@@ -6,6 +6,7 @@ This project analyzes gene expression data from RNA-seq experiments to study how
 The goal is to identify differentially expressed genes, explore biological patterns, and build a simple machine learning model capable of classifying cell types based on gene expression profiles.
 
 🧪 Dataset
+
 Source: GEO DataSets (GSE196284)
 Organism: Human
 Samples: 4 (2 normal, 2 tumor)
