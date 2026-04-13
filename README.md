@@ -52,23 +52,30 @@ Model training using Logistic Regression
 Due to the extremely small dataset (4 samples), the model is evaluated on the training data and shows overfitting. This implementation is intended for demonstration purposes only.
 
 🧠 Key Learnings
+
 High-dimensional biological data requires careful feature selection
 Small datasets can lead to overfitting in machine learning models
 Combining biological knowledge with data science improves interpretation of results
 End-to-end workflows require both analysis and structured pipelines
+
 🛠️ Tech Stack
+
 Python
 Pandas, NumPy
 Seaborn, Matplotlib
 Scikit-learn
 Jupyter Notebooks
 Git & GitHub
+
 🚀 Future Work
+
 Refactor code into a structured pipeline
 Deploy model using FastAPI
 Containerize with Docker
 Deploy to cloud (Render or Railway)
+
 📂 Project Structure
+
 gene-expression-analysis/
 │
 ├── data/
