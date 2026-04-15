@@ -1,102 +1,105 @@
-🧬 Gene Expression Analysis under Oxidative Stress
-📌 Overview
+# 🧬 Gene Expression Analysis & Tumor Prediction API
 
-This project analyzes gene expression data from RNA-seq experiments to study how normal and tumor pancreatic cells respond to oxidative stress.
+This project implements a complete Data Science pipeline applied to gene expression data, from exploratory analysis to deploying a machine learning model as an API.
 
-The goal is to identify differentially expressed genes, explore biological patterns, and build a simple machine learning model capable of classifying cell types based on gene expression profiles.
+---
 
-🧪 Dataset
+## 📌 Objective
 
-Source: GEO DataSets (GSE196284)
-Organism: Human
-Samples: 4 (2 normal, 2 tumor)
-Conditions:
-Normal pancreatic cells (HPNE)
-Tumor pancreatic cells (PANC1)
-With and without oxidative stress (H2O2)
-🔬 Methodology
-1. Exploratory Data Analysis (EDA)
-Data loading and inspection
-Quality checks (missing values, duplicates, distribution)
-Visualization (histograms, boxplots, correlation heatmaps)
-2. Preprocessing
-CPM normalization (Counts Per Million)
-Log2 transformation
-Gene annotation
-3. Differential Expression Analysis
-Calculation of log2 Fold Change
-Statistical testing (p-values)
-Identification of significantly regulated genes
+To develop a model capable of predicting tumor presence based on gene expression levels and expose it through an accessible API.
 
-📊 Visualizations:
+---
 
-Volcano plot
-Heatmap of top genes
+## 🧪 Dataset
 
-4. Biological Insight
+The dataset consists of gene expression data with a limited number of samples.
 
-An additional analysis explored the effect of oxidative stress within each cell type.
+⚠️ Due to the small dataset size, results should be interpreted with caution.
 
-Results suggest that normal cells exhibit stronger transcriptional changes under oxidative stress, while tumor cells show a more moderate response, potentially reflecting altered regulatory mechanisms.
+---
 
-5. Machine Learning
+## ⚙️ Project Pipeline
 
-A classification model was built to predict cell type (normal vs tumor) from gene expression data.
+1. Exploratory Data Analysis (EDA)  
+2. Data preprocessing  
+3. Feature (gene) selection  
+4. Model training  
+5. Deployment as an API using FastAPI  
 
-Steps:
+---
 
--Feature selection using top differentially expressed genes
+## 🤖 Model
 
--Data scaling
+A simple model (**Logistic Regression**) was used to reduce the risk of overfitting given the small dataset size.
 
--Model training using Logistic Regression
+---
 
-⚠️ Note:
-Due to the extremely small dataset (4 samples), the model is evaluated on the training data and shows overfitting. This implementation is intended for demonstration purposes only.
+## 🚀 API
 
-🧠 Key Learnings
+You can test the API here:
 
--High-dimensional biological data requires careful feature selection
+https://gene-expression-api.onrender.com/docs
 
--Small datasets can lead to overfitting in machine learning models
+---
 
--Combining biological knowledge with data science improves interpretation of results
+## 📥 Example Usage
 
--End-to-end workflows require both analysis and structured pipelines
+Endpoint:
+POST /predict
 
-🛠️ Tech Stack
+Example input:
 
+```json
+{
+  "TOMM20": 6.2,
+  "SPRED3": 2.8,
+  "MITF": 2.0
+}
+```
+Response:
+
+```json
+{
+  "prediction": "tumor",
+  "confidence": 0.60
+}
+```
+---
+
+## ⚠️ Limitations
+-Very small dataset
+
+-Potential overfitting
+
+-Not validated on external data
+
+---
+
+## 📈 Future Improvements
+-Use larger datasets
+
+-Apply cross-validation
+
+-Improve feature engineering
+
+-Add an interactive interface (e.g., Streamlit)
+
+---
+
+## 🛠️ Technologies Used
 -Python
 
--Pandas, NumPy
-
--Seaborn, Matplotlib
+-Pandas / NumPy
 
 -Scikit-learn
 
--Jupyter Notebooks
+-FastAPI
 
--Git & GitHub
+-Uvicorn
 
-🚀 Future Work
+-Render
 
-Refactor code into a structured pipeline
-Deploy model using FastAPI
-Containerize with Docker
-Deploy to cloud (Render or Railway)
 
-📂 Project Structure
+## 👩‍🔬 Author
 
-gene-expression-analysis/
-│
-├── data/
-├── notebooks/
-├── results/
-├── README.md
-🔗 Repository
-
-👉 https://github.com/FedericaUntermann/gene-expression-analysis
-
-📬 Contact
-
-If you're interested in this project or would like to collaborate, feel free to connect!
+Developed by Federica Untermann.
